@@ -13,7 +13,7 @@
 import sys
 from time import time
 sys.path.append("../tools/")
-om email_preprocess import preprocess
+from email_preprocess import preprocess
 
 
 ### features_train and features_test are the features for the training
