@@ -35,9 +35,9 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble  import AdaBoostClassifier
 from sklearn.ensemble  import RandomForestClassifier
 
-clf = KNeighborsClassifier(n_neighbors=3)
+clf = KNeighborsClassifier(n_neighbors=3)                                        #.913
 #clf = AdaBoostClassifier(n_estimators = 3)
-#clf = RandomForestClassifier(n_estimators=100, max_depth=2, random_state=0)
+#clf = RandomForestClassifier(n_estimators=100, max_depth=2, random_state=0)     #.92
 
 clf.fit(features_train, labels_train)
 pred = clf.predict(features_test)
