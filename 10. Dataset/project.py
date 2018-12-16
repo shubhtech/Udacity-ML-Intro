@@ -23,8 +23,9 @@ enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r")
 #print (enron_data[1])
 #enron_data_lst =  list(enron_data.keys())
 enron_data_lst =  list(enron_data.values())
-print (len(enron_data_lst[0]))
+#print (len(enron_data_lst[0]))
 
+print (enron_data_lst[0])
 """
 poi = 0
 for i in enron_data:
@@ -37,4 +38,15 @@ print (poi)
 
 #print (enron_data["PRENTICE JAMES"]["total_stock_value"])
 #print (enron_data["COLWELL WESLEY"]["from_this_person_to_poi"])
-print (enron_data["SKILLING JEFFREY K"]["exercised_stock_options"])
+#print (enron_data["SKILLING JEFFREY K"]["exercised_stock_options"])
+#print (enron_data)
+count = 0
+
+for i in enron_data:
+    for j in enron_data[i]:
+        if j == 'total_payments':
+            if enron_data[i][j] == 'NaN':
+                count = count + 1
+print (count)
+
+
